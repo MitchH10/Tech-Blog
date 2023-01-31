@@ -50,7 +50,6 @@ router.get('/post/:id', withAuth, async (req, res) => {
 
     const post = dbPostData.get({ plain: true });
     let idEqual = req.session.user_id == dbPostData.user_id;
-    console.log(post);
     res.render('post', { post, loggedIn: req.session.loggedIn, idEqual: idEqual});
   } catch (err) {
     console.log(err);
