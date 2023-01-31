@@ -1,0 +1,17 @@
+<section class="container">
+  <h1 class="gallery-name">{{post.title}}</h1>
+  <h2>{{post.contents}}</h2>
+  <p>Author: {{post.user.username}}</p>
+  <p>Date Created: {{format_date post.date_created}}</p>
+  {{#if idEqual}}
+  <p class="btn btn-primary" type="submit" id="delete">Delete</p>
+  {{/if}}
+  <h1>Comments:</h1>
+  <section class="flex-row justify-center">
+    {{#each post.comments as |comment|}}
+    {{> comment-details}}
+    {{/each}}
+  </section>
+</section>
+
+<script src="/js/postdel.js"></script>

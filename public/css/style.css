@@ -67,11 +67,21 @@ nav a:hover {
 }
 
 .gallery {
-  flex: 4;
+  flex: 1;
   background-color: #fff;
   padding: 50px;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column-reverse wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallerySingle {
+  flex: 1;
+  background-color: #fff;
+  padding: 50px;
+  display: flex;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
 }

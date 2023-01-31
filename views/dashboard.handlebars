@@ -1,0 +1,5 @@
+<h1>User: {{username}}</h1>
+<a href="/new/post"><button type="button">Create Post</button></a>
+{{#each posts as |post|}}
+{{> post-details}}
+{{/each}}
