@@ -120,6 +120,17 @@ router.get('/new/post', withAuth, async (req, res) => {
   }
 });
 
+router.get('/update/post/:id', withAuth, async (req, res) => {
+  try  {
+    const dbPostData = await Post.findByPk(req.params.id);
+    const post = dbPostData.get({ plain: true });
+    res.render('postUpdate', {post, user_id: req.session.user_id});
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 
 // GET one painting
 // Use the custom middleware before allowing the user to access the painting

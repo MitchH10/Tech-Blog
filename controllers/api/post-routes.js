@@ -34,11 +34,15 @@ router.delete('/:id', async (req, res) => {
 
   router.put ('/:id', async (req, res) => {
     try {
-      const dbPostData = Post.update({
+      const dbPostData = await Post.update({
         title: req.body.title,
         contents: req.body.contents,
         date_created: Date(),
         user_id: req.session.user_id
+      }, {
+        where: {
+          id: req.params.id
+        }
       });
       
       res.json(dbPostData);

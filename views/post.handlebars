@@ -5,6 +5,7 @@
   <p>Date Created: {{format_date post.date_created}}</p>
   {{#if idEqual}}
   <p class="btn btn-primary" type="submit" id="delete">Delete</p>
+  <a href="/update/post/{{post.id}}"><button type="button">Update Post</button></a>
   {{/if}}
   <form class="post-form">
       <div class="form-group">
