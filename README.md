@@ -1,4 +1,4 @@
-# E-Commerce Backend Api [![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
+# Tech Blog Api [![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
 
 ## Description
 This is an express blog made with sequelize. Complete with user authentication, posting updates, and commenting.
